@@ -10,22 +10,22 @@ import java.util.*
  * @since 25/11/2023
  */
 
-private val lastYear = Calendar.getInstance().get(Calendar.YEAR)
+private val currentYear = Calendar.getInstance().get(Calendar.YEAR)
 
 fun askYear(terminal: Terminal): Int {
 	val year = terminal.prompt(
 		TextColors.green(
 			"From ${(TextColors.red + TextStyles.bold)("which year")} " +
 					TextColors.green("you want run the task. ") +
-					(TextColors.yellow + TextStyles.bold)("[2015-$lastYear]")
+					(TextColors.yellow + TextStyles.bold)("[2015-$currentYear]")
 		)
 	)?.toIntOrNull()
 
-	if (year == null || !(2015..lastYear).contains(year)) {
+	if (year == null || !(2015..currentYear).contains(year)) {
 		terminal.println(
 			TextColors.red(
 				"This in an invalid year. " +
-						(TextColors.yellow + TextStyles.bold)("[2015-$lastYear]")
+						(TextColors.yellow + TextStyles.bold)("[2015-$currentYear]")
 			)
 		)
 		askYear(terminal)
@@ -38,7 +38,7 @@ fun askDay(terminal: Terminal): Int {
 	val day = terminal.prompt(
 		TextColors.green(
 			"From ${(TextColors.red + TextStyles.bold)("which day")} " +
-					TextColors.green("you want run the task. ") +
+					TextColors.green("you would like to perform the task. ") +
 					(TextColors.yellow + TextStyles.bold)("[1-24]")
 		)
 	)?.toIntOrNull()

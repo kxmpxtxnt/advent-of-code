@@ -37,7 +37,7 @@ open class AdventOfCode(
 	private val path: Path =
 		Paths.get(ClassLoader.getSystemResource("$year-${day.toString().padStart(2, '0')}.txt").toURI())
 
-	val inputLines: MutableSet<String> = path.readLines().toMutableSet()
+	val inputLines: List<String> = path.readLines()
 	var input: String = path.readText()
 
 	private var first: (() -> Any) = {}
