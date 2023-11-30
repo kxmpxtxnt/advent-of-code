@@ -32,8 +32,6 @@ val forthOf2015 = 2015.4 {
 		}
 	}
 
-
-
 	first {
 		mineAdventCoin(input, "00000")
 	}
