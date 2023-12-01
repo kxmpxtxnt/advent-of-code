@@ -5,6 +5,7 @@ import com.github.ajalt.mordant.rendering.TextColors.red
 import fyi.pauli.aoc.sled.prompt.askDay
 import fyi.pauli.aoc.sled.prompt.askYear
 import fyi.pauli.aoc.v2015.`2015`
+import fyi.pauli.aoc.v2023.`2023`
 import invoke
 import terminal
 
@@ -17,7 +18,8 @@ fun main() = Sled().handOutGifts()
 class Sled {
 
 	private val collection: Map<Int, Set<Task>> = mapOf(
-		2015 to `2015`
+		2015 to `2015`,
+		2023 to `2023`
 	)
 
 	fun handOutGifts() {
