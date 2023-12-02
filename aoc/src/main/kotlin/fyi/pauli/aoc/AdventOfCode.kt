@@ -31,7 +31,7 @@ operator fun Double.invoke(run: AdventOfCode.() -> Unit): Task {
 open class AdventOfCode(
 	year: Int,
 	day: Int,
-	val run: AdventOfCode.() -> Unit
+	private val run: AdventOfCode.() -> Unit
 ) {
 
 	private val path: Path =
